@@ -20,6 +20,7 @@ from server import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', v.index),
     path('signup/<str:data>', v.signup),
     path('login/<str:data>', v.login),
     path('blindCode/<str:data>', v.blindCode),

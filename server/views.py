@@ -5,6 +5,9 @@ from rest_framework import status
 import json
 import functions
 
+def index(request):
+    return HttpResponse(200)
+
 # Create your views here.
 @api_view(['POST', 'GET'])
 def signup(request, data):

@@ -230,7 +230,27 @@ def treasurehunt(data):
         wks.update_cell(n, 9, data['mem2'])
         wks.update_cell(n, 10, data['mem3'])
         wks.update_cell(n, 11, data['mem4'])
-        wks.update_cell(n, 12, data['mem5'])
+        # wks.update_cell(n, 12, data['mem5'])
+        return 1
+    except:
+        # server error
+        return 0
+
+
+def animatrix(data):
+    print(data)
+    wks = sheet.worksheet(data['event'])
+    n = rows(data['event'])
+    n += 2
+
+    try:
+        wks.update_cell(n, 1, data['name'])
+        wks.update_cell(n, 2, data['mail'])
+        wks.update_cell(n, 3, data['phone'])
+        wks.update_cell(n, 4, data['whatsapp'])
+        wks.update_cell(n, 5, data['college'])
+        wks.update_cell(n, 6, data['yos'])
+        wks.update_cell(n, 7, data['branch'])
         return 1
     except:
         # server error

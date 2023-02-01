@@ -101,3 +101,12 @@ def treasurehunt(request, data):
         return HttpResponse(get)
     except:
         return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def animatrix(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.animatrix(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)

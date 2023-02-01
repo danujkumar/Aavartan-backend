@@ -57,7 +57,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://nitrr-technocracy.com/"
+    "https://nitrr-technocracy.com"
 ]
 
 # CORS_ORIGIN_ALLOW_ALL = False

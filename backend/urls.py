@@ -26,7 +26,10 @@ urlpatterns = [
     path('blindCode/<str:data>', v.blindCode),
     path('bow/<str:data>', v.bow),
     path('hydrolift/<str:data>', v.hydrolift),
-    path('shipwreck/<str:data>', v.shipwreck)
+    path('shipwreck/<str:data>', v.shipwreck),
+    path('scavengerhunt/<str:data>', v.scavengerhunt),
+    path('codetag/<str:data>', v.codetag),
+    path('treasurehunt/<str:data>', v.treasurehunt),
 ]
 # urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

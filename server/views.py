@@ -72,3 +72,32 @@ def shipwreck(request, data):
         return HttpResponse(get)
     except:
         return HttpResponse(0)
+
+
+@api_view(['POST', 'GET'])
+def scavengerhunt(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.scavengerhunt(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+
+@api_view(['POST', 'GET'])
+def codetag(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.codetag(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def treasurehunt(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.treasurehunt(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)

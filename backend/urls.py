@@ -22,5 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/<str:data>', v.signup),
     path('login/<str:data>', v.login),
-    path('register/<str:data>', v.register)
+    path('blindCode/<str:data>', v.blindCode),
+    path('bow/<str:data>', v.bow),
+    path('hydrolift/<str:data>', v.hydrolift),
+    path('shipwreck/<str:data>', v.shipwreck)
 ]

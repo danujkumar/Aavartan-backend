@@ -33,11 +33,39 @@ def login(request, data):
         
 
 @api_view(['POST', 'GET'])
-def register(request, data):
+def blindCode(request, data):
     data = json.loads(data)
     print(data)
     try:
-        get = functions.register(data)
+        get = functions.blindCode(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def bow(request, data):
+    data = json.loads(data)
+    print(data)
+    try:
+        get = functions.bow(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def hydrolift(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.hydrolift(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def shipwreck(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.shipwreck(data)
         return HttpResponse(get)
     except:
         return HttpResponse(0)

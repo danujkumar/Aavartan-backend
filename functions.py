@@ -85,7 +85,7 @@ def login(data):
         return -1
 
 
-def register(data):
+def blindCode(data):
     print(data)
     wks = sheet.worksheet(data['event'])
     print(wks)
@@ -93,22 +93,73 @@ def register(data):
     n += 2
 
     try:
-        wks.update_cell(n, 1, data['team_name'])
-        wks.update_cell(n, 2, data['team_leader_name'])
-        wks.update_cell(n, 3, data['team_leader_mail'])
-        wks.update_cell(n, 4, data['college_name'])
+        wks.update_cell(n, 1, data['name'])
+        wks.update_cell(n, 2, data['mail'])
+        wks.update_cell(n, 3, data['phone'])
+        wks.update_cell(n, 4, data['whatsapp'])
+        wks.update_cell(n, 5, data['college'])
+        wks.update_cell(n, 6, data['yos'])
+        wks.update_cell(n, 7, data['branch'])
+        wks.update_cell(n, 8, data['hackerrank'])
+        return 1
+    except:
+        # server error
+        return 0
 
-        size = len(data) - 5;
-        size = size / 2;
-        
-        i = 1
-        cell = 5
-        while i <= size:
-            wks.update_cell(n, cell, data['name' + str(i)])
-            wks.update_cell(n, cell + 1, data['phone' + str(i)])
-            cell += 2
-            i += 1;
+def bow(data):
+    print(data)
+    wks = sheet.worksheet(data['event'])
+    print(wks)
+    n = rows(data['event'])
+    n += 2
 
+    try:
+        wks.update_cell(n, 1, data['name'])
+        wks.update_cell(n, 2, data['mail'])
+        wks.update_cell(n, 3, data['phone'])
+        wks.update_cell(n, 4, data['whatsapp'])
+        wks.update_cell(n, 5, data['college'])
+        wks.update_cell(n, 6, data['course'])
+        wks.update_cell(n, 7, data['yos'])
+        wks.update_cell(n, 8, data['branch'])
+        return 1
+    except:
+        # server error
+        return 0
+
+def hydrolift(data):
+    print(data)
+    wks = sheet.worksheet(data['event'])
+    n = rows(data['event'])
+    n += 2
+
+    try:
+        wks.update_cell(n, 1, data['name'])
+        wks.update_cell(n, 2, data['mail'])
+        wks.update_cell(n, 3, data['phone'])
+        wks.update_cell(n, 4, data['whatsapp'])
+        wks.update_cell(n, 5, data['college'])
+        wks.update_cell(n, 6, data['yos'])
+        wks.update_cell(n, 7, data['branch'])
+        return 1
+    except:
+        # server error
+        return 0
+
+def shipwreck(data):
+    print(data)
+    wks = sheet.worksheet(data['event'])
+    n = rows(data['event'])
+    n += 2
+
+    try:
+        wks.update_cell(n, 1, data['name'])
+        wks.update_cell(n, 2, data['mail'])
+        wks.update_cell(n, 3, data['phone'])
+        wks.update_cell(n, 4, data['whatsapp'])
+        wks.update_cell(n, 5, data['college'])
+        wks.update_cell(n, 6, data['yos'])
+        wks.update_cell(n, 7, data['branch'])
         return 1
     except:
         # server error

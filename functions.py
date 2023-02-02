@@ -7,22 +7,29 @@ import pytz
 import json
 
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
-            "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("aavartan.json", scope)
+         "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+creds = ServiceAccountCredentials.from_json_keyfile_name(
+    "aavartan.json", scope)
 opener = gspread.authorize(creds)
 sheet = opener.open("Aavartan")
 
 # return number of rows in a sheet
+
+
 def rows(work):
     wks = sheet.worksheet(work)
     return len(wks.get_all_records())
 
 # return all records of a sheet
+
+
 def allRec(work):
     wks = sheet.worksheet(work)
     return wks.get_all_records()
 
 # checks if this mail already exists
+
+
 def check_mail(mail):
     record = {}
     wks = sheet.worksheet("users")
@@ -40,6 +47,8 @@ def check_mail(mail):
     return False
 
 # adds this user to the sheet
+
+
 def addUser(data):
     if check_mail(data['email']):
         return 2
@@ -67,6 +76,7 @@ def addUser(data):
     except:
         # server error
         return 0
+
 
 def login(data):
     record = check_mail(data['email'])
@@ -106,6 +116,7 @@ def blindCode(data):
         # server error
         return 0
 
+
 def bow(data):
     print(data)
     wks = sheet.worksheet(data['event'])
@@ -127,6 +138,7 @@ def bow(data):
         # server error
         return 0
 
+
 def hydrolift(data):
     print(data)
     wks = sheet.worksheet(data['event'])
@@ -146,6 +158,7 @@ def hydrolift(data):
         # server error
         return 0
 
+
 def shipwreck(data):
     print(data)
     wks = sheet.worksheet(data['event'])
@@ -164,6 +177,7 @@ def shipwreck(data):
     except:
         # server error
         return 0
+
 
 def scavengerhunt(data):
     print(data)
@@ -257,6 +271,7 @@ def animatrix(data):
         # server error
         return 0
 
+
 def robotrek(data):
     print(data)
     wks = sheet.worksheet(data['event'])
@@ -275,6 +290,7 @@ def robotrek(data):
     except:
         # server error
         return 0
+
 
 def circuitrix(data):
     print(data)
@@ -295,6 +311,7 @@ def circuitrix(data):
         # server error
         return 0
 
+
 def openmic(data):
     print(data)
     wks = sheet.worksheet(data['event'])
@@ -312,6 +329,7 @@ def openmic(data):
     except:
         # server error
         return 0
+
 
 def valorant(data):
     print(data)
@@ -333,6 +351,7 @@ def valorant(data):
         # server error
         return 0
 
+
 def bbs(data):
     print(data)
     wks = sheet.worksheet(data['event'])
@@ -352,7 +371,8 @@ def bbs(data):
     except:
         # server error
         return 0
-    
+
+
 def speedcubing(data):
     print(data)
     wks = sheet.worksheet(data['event'])
@@ -372,12 +392,34 @@ def speedcubing(data):
         # server error
         return 0
 
-    
+
+def ecopolis(data):
+    print(data)
+    wks = sheet.worksheet(data['event'])
+    n = rows(data['event'])
+    n += 2
+    try:
+        wks.update_cell(n, 1, data['team_name'])
+        wks.update_cell(n, 2, data['leader_name'])
+        wks.update_cell(n, 3, data['leader_mail'])
+        wks.update_cell(n, 4, data['leader_whatsapp'])
+        wks.update_cell(n, 5, data['leader_college'])
+        wks.update_cell(n, 6, data['leader_number'])
+        wks.update_cell(n, 7, data['leader_branch'])
+        wks.update_cell(n, 8, data['yos'])
+        wks.update_cell(n, 9, data['mem2'])
+        wks.update_cell(n, 10, data['mem3'])
+        # wks.update_cell(n, 12, data['mem5'])
+        return 1
+    except:
+        # server error
+        return 0
+
+
 def clickovartan(data):
     wks = sheet.worksheet(data['event'])
     n = rows(data['event'])
     n += 2
-
     try:
         wks.update_cell(n, 1, data['name'])
         wks.update_cell(n, 2, data['mail'])
@@ -394,6 +436,7 @@ def clickovartan(data):
         wks.update_cell(n, 8, link1)
         wks.update_cell(n, 9, link2)
         wks.update_cell(n, 10, link3)
+
         return 1
     except:
         # server error

@@ -36,6 +36,10 @@ urlpatterns = [
     path('bbs/<str:data>', v.bbs),
     path('speedcubing/<str:data>', v.speedcubing),
     path('circuitrix/<str:data>', v.circuitrix),
+    path('ecopolis/<str:data>', v.ecopolis),
+    #from here i need to work
+    
+
     path('openmic/<str:data>', v.openmic),
     path('clickovartan/<str:data>', v.clickovartan),
     path('pic1/<str:data>', v.pic1),

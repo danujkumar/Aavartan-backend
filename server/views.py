@@ -193,35 +193,3 @@ def clickovartan(request, data):
         return HttpResponse(get)
     except:
         return HttpResponse(0)
-
-
-@api_view(['POST', 'GET'])
-def pic1(request, data):
-    data = json.loads(data)
-    try:
-        get = functions.pic1(data)
-        return HttpResponse(get)
-    except:
-        return HttpResponse(0)
-
-
-
-@api_view(['POST', 'GET'])
-def pic2(request, data):
-    data = json.loads(data)
-    try:
-        get = functions.pic2(data)
-        return HttpResponse(get)
-    except:
-        return HttpResponse(0)
-
-
-
-@api_view(['POST', 'GET'])
-def pic3(request, data):
-    data = json.loads(data)
-    try:
-        get = functions.pic3(data)
-        return HttpResponse(get)
-    except:
-        return HttpResponse(0)

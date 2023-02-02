@@ -110,4 +110,66 @@ def animatrix(request, data):
         return HttpResponse(get)
     except:
         return HttpResponse(0)
+    
+@api_view(['POST', 'GET'])
+def robotrek(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.robotrek(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
 
+@api_view(['POST', 'GET'])
+def circuitrix(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.circuitrix(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def valorant(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.valorant(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def bbs(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.bbs(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def openmic(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.openmic(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+
+@api_view(['POST', 'GET'])
+def clickovartan(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.clickovartan(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)
+    
+@api_view(['POST', 'GET'])
+def speedcubing(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.speedcubing(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)

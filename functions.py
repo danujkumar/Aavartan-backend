@@ -255,3 +255,22 @@ def animatrix(data):
     except:
         # server error
         return 0
+
+def robotrek(data):
+    print(data)
+    wks = sheet.worksheet(data['event'])
+    n = rows(data['event'])
+    n += 2
+
+    try:
+        wks.update_cell(n, 1, data['mail'])
+        wks.update_cell(n, 2, data['leader_name'])
+        wks.update_cell(n, 3, data['leader_number'])
+        wks.update_cell(n, 4, data['leader_mail'])
+        wks.update_cell(n, 5, data['name2'])
+        wks.update_cell(n, 6, data['name3'])
+        wks.update_cell(n, 7, data['name4'])
+        return 1
+    except:
+        # server error
+        return 0

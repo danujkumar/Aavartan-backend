@@ -32,15 +32,16 @@ urlpatterns = [
     path('treasurehunt/<str:data>', v.treasurehunt),
     path('animatrix/<str:data>', v.animatrix),
     path('robotrek/<str:data>', v.robotrek),
-    path('ecopolis/<str:data>', v.ecopolis),
-    #from here i need to work
-    
-    path('circuitrix/<str:data>', v.circuitrix),
     path('valorant/<str:data>', v.valorant),
     path('bbs/<str:data>', v.bbs),
+    path('speedcubing/<str:data>', v.speedcubing),
+    path('circuitrix/<str:data>', v.circuitrix),
+    #from here i need to work
+    
+
     path('openmic/<str:data>', v.openmic),
     path('clickovartan/<str:data>', v.clickovartan),
-    path('speedcubing/<str:data>', v.speedcubing),
+    
 ]
 # urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

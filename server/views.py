@@ -110,3 +110,4 @@ def animatrix(request, data):
         return HttpResponse(get)
     except:
         return HttpResponse(0)
+

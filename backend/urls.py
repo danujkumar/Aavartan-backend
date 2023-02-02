@@ -32,6 +32,7 @@ urlpatterns = [
     path('treasurehunt/<str:data>', v.treasurehunt),
     path('animatrix/<str:data>', v.animatrix),
     path('robotrek/<str:data>', v.robotrek),
+    path('ecopolis/<str:data>', v.ecopolis),
     #from here i need to work
     
     path('circuitrix/<str:data>', v.circuitrix),

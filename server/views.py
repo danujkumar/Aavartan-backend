@@ -173,3 +173,13 @@ def speedcubing(request, data):
         return HttpResponse(get)
     except:
         return HttpResponse(0)
+
+
+@api_view(['POST', 'GET'])
+def ecopolis(request, data):
+    data = json.loads(data)
+    try:
+        get = functions.ecopolis(data)
+        return HttpResponse(get)
+    except:
+        return HttpResponse(0)

@@ -41,11 +41,7 @@ urlpatterns = [
     
 
     path('openmic/<str:data>', v.openmic),
-    path('clickovartan/<str:data>', v.clickovartan),
-    path('pic1/<str:data>', v.pic1),
-    path('pic2/<str:data>', v.pic2),
-    path('pic3/<str:data>', v.pic3),
-    
+    path('clickovartan/<str:data>', v.clickovartan)
 ]
 # urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

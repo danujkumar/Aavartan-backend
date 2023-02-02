@@ -121,10 +121,10 @@ def robotrek(request, data):
         return HttpResponse(0)
 
 @api_view(['POST', 'GET'])
-def circutrix(request, data):
+def circuitrix(request, data):
     data = json.loads(data)
     try:
-        get = functions.circutrix(data)
+        get = functions.circuitrix(data)
         return HttpResponse(get)
     except:
         return HttpResponse(0)

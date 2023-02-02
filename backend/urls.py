@@ -34,7 +34,7 @@ urlpatterns = [
     path('robotrek/<str:data>', v.robotrek),
     #from here i need to work
     
-    path('circutrix/<str:data>', v.circutrix),
+    path('circuitrix/<str:data>', v.circuitrix),
     path('valorant/<str:data>', v.valorant),
     path('bbs/<str:data>', v.bbs),
     path('openmic/<str:data>', v.openmic),

@@ -274,3 +274,22 @@ def robotrek(data):
     except:
         # server error
         return 0
+
+def circuitrix(data):
+    print(data)
+    wks = sheet.worksheet(data['event'])
+    n = rows(data['event'])
+    n += 2
+
+    try:
+        wks.update_cell(n, 1, data['name'])
+        wks.update_cell(n, 2, data['mail'])
+        wks.update_cell(n, 3, data['phone'])
+        wks.update_cell(n, 4, data['whatsapp'])
+        wks.update_cell(n, 5, data['college'])
+        wks.update_cell(n, 6, data['yos'])
+        wks.update_cell(n, 7, data['branch'])
+        return 1
+    except:
+        # server error
+        return 0
